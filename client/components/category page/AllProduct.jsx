@@ -1,23 +1,21 @@
-import { Card, Rating } from "flowbite-react";
-import Link from "next/link";
+import { Card, Rating } from 'flowbite-react'
+import Link from 'next/link'
 
 function AllProducts({ data, addToCartHandler }) {
-  const { images, name, category, stock, price, rating, _id } = data;
-  const calcRating = rating.reduce((acc, value)=> acc + value, 0) / data.rating.length
+  const { images, name, category, stock, price, rating, _id } = data
+  const calcRating =
+    rating.reduce((acc, value) => acc + value, 0) / data.rating.length
   const _rating = calcRating.toFixed(1)
 
   const setProductId = (e) => {
-    e.preventDefault();
-    window.localStorage.setItem("product_id", JSON.stringify(_id));
-  };
+    e.preventDefault()
+    window.localStorage.setItem('product_id', JSON.stringify(_id))
+  }
 
   return (
     <>
-      <div className="h-auto w-60">
-        <Card
-          imgAlt={name}
-          imgSrc={images[0]}
-        >
+      <div className="h-auto w-20 md:w-60">
+        <Card className="max-w-sm" imgAlt={name} imgSrc={images[0]}>
           <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
             {name}
           </h5>
@@ -69,7 +67,7 @@ function AllProducts({ data, addToCartHandler }) {
         </Card>
       </div>
     </>
-  );
+  )
 }
 
-export default AllProducts;
+export default AllProducts

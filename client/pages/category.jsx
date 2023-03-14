@@ -128,7 +128,7 @@ function category() {
           <h1 className="text-2xl text-center pt-9">All Products</h1>
         </div>
         <div className="flex flex-row pt-12">
-          <div className="w-1/5">
+          <div className="w-[20%]">
             {/* left all filter */}
             <Left
               getCategory={setGetCategory}
@@ -137,7 +137,7 @@ function category() {
               handleSort={handleSort}
             />
           </div>
-          <div className="w-4/5">
+          <div className="w-[80%]">
             <Right data={finalResult} itemsPerPage={8} 
             addToCartHandler={addToCartHandler} 
             />

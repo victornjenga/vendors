@@ -4,7 +4,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import axios from "axios";
 import { Triangle } from "react-loader-spinner";
 import { useState } from "react";
-
+import { baseUrl } from "../../../baseurl";
 function UpdateProfile({ accesstoken }) {
   // console.log(accesstoken)
   let image;
@@ -24,7 +24,7 @@ function UpdateProfile({ accesstoken }) {
         getDownloadURL(imgRef)
           .then((url) => {
             axios
-              .post("http://127.0.0.1:5000/updateProfile", {
+              .post(baseUrl+"updateProfile", {
                 uid: accesstoken,
                 profilepic: url,
               })

@@ -1,17 +1,17 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, signOut } from "firebase/auth";
+import { initializeApp } from 'firebase/app'
+import { getAuth, signOut } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAz_lEV49bBnadpK4Sa0mDOb6zURFhQ2s",
-  authDomain: "ecom-keplar.firebaseapp.com",
-  projectId: "ecom-keplar",
-  storageBucket: "ecom-keplar.appspot.com",
-  messagingSenderId: "185069600372",
-  appId: "1:185069600372:web:96a071924545677a86db21",
-};
+  apiKey: 'AIzaSyBRYuXg_iF4z2Wqg43ILyA_BZQ-APDXUT8',
+  authDomain: 'testing-72b0b.firebaseapp.com',
+  projectId: 'testing-72b0b',
+  storageBucket: 'testing-72b0b.appspot.com',
+  messagingSenderId: '1070897141321',
+  appId: '1:1070897141321:web:d08497be5db466cee3d198',
+}
 
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const app = initializeApp(firebaseConfig)
+export const auth = getAuth(app)
 
 // export const checkUser =async(setLoggedinUser) => {
 //  await onAuthStateChanged(auth, (user) => {

@@ -6,7 +6,7 @@ import { baseUrl } from "../../../../baseurl";
 function AllUsers() {
   const [AllSellers, setAllSellers] = useState([]);
   useEffect(() => {
-    axios.get( baseUrl+" getuser/getalluser").then((data) => {
+    axios.get( baseUrl+"getuser/getalluser").then((data) => {
       const seller = data.data.seller;
       setAllSellers(seller);
     });

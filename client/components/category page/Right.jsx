@@ -1,19 +1,19 @@
-import AllProducts from "./AllProduct";
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
+import AllProducts from './AllProduct'
+import { useState } from 'react'
+import ReactPaginate from 'react-paginate'
 function Right({ data, itemsPerPage, addToCartHandler }) {
-  const items = data;
+  const items = data
 
-  const [itemOffset, setItemOffset] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0)
 
-  const endOffset = itemOffset + itemsPerPage;
-  const currentItems = items.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(items.length / itemsPerPage);
+  const endOffset = itemOffset + itemsPerPage
+  const currentItems = items.slice(itemOffset, endOffset)
+  const pageCount = Math.ceil(items.length / itemsPerPage)
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    setItemOffset(newOffset);
-  };
+    const newOffset = (event.selected * itemsPerPage) % items.length
+    setItemOffset(newOffset)
+  }
 
   return (
     <>
@@ -28,7 +28,7 @@ function Right({ data, itemsPerPage, addToCartHandler }) {
         activeLinkClassName="a"
         className="flex mb-10 text-lg gap-x-6 text-slate-500 "
       />
-      <div className="grid grid-cols-4 gap-y-6">
+      <div className="grid grid-cols-2 gap-y-6 w-full">
         {currentItems.map((data) => (
           <AllProducts
             key={data._id}
@@ -38,7 +38,7 @@ function Right({ data, itemsPerPage, addToCartHandler }) {
         ))}
       </div>
     </>
-  );
+  )
 }
 
-export default Right;
+export default Right

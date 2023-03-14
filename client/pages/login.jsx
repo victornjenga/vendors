@@ -77,7 +77,7 @@ function Login() {
   };
   return (
     <>
-      <div className="flex items-center justify-center w-full h-screen bg-slate-200">
+      <div className="flex items-center justify-center w-full h-screen ">
         <form className="flex flex-col gap-4 w-96" onSubmit={handleSubmit}>
           <div>
             <div className="block mb-2">
@@ -95,7 +95,9 @@ function Login() {
               <p className="text-sm text-red-700">
                 Please input this field with a valid email address
               </p>
-            ) : null}
+            ) : (
+              ""
+            )}
           </div>
 
           <div>

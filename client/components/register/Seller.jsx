@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { Triangle } from "react-loader-spinner";
-
+import { baseUrl } from "../../baseurl";
 // Global variable
 let exitsUsername = "";
 let exitsEmail = "";
@@ -83,7 +83,7 @@ function Seller() {
 
     // creating seller account
     axios
-      .post("http://localhost:5000/registerseller", {
+      .post(baseUrl+"registerseller", {
         email: Email,
         password: Password,
         username: Username,
@@ -124,7 +124,7 @@ function Seller() {
   };
   return (
     <>
-      <form className="flex flex-col gap-4 w-96" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-4 w-64 md:w-96" onSubmit={handleSubmit}>
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email" value="Your email" />

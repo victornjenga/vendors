@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { Triangle } from "react-loader-spinner";
-
+import { baseUrl } from "../../baseurl";
 // Global variable
 let exitsUsername = "";
 let exitsEmail = "";
@@ -80,7 +80,7 @@ function Customer() {
 
     //creating customer account
     axios
-      .post("http://127.0.0.1:5000/registercustomer", {
+      .post(baseUrl+"registercustomer", {
         email: Email,
         password: Password,
         username: Username,
@@ -112,7 +112,7 @@ function Customer() {
   };
   return (
     <>
-      <form className="flex flex-col gap-4 w-96" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-4  w-64 md:w-96" onSubmit={handleSubmit}>
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email" value="Your email" />
