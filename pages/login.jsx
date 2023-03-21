@@ -20,6 +20,7 @@ function Login() {
 
   const router = useRouter();
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const Email = email.current.value;
@@ -75,6 +76,8 @@ function Login() {
       });
     // setLoading(false);
   };
+
+
   return (
     <>
       <div className="flex items-center justify-center w-full h-screen ">

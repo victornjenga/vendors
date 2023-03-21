@@ -127,7 +127,7 @@ function category() {
         <div>
           <h1 className="text-2xl text-center pt-9">All Products</h1>
         </div>
-        <div className="flex flex-row pt-12">
+        <div className="flex flex-col pt-12">
           <div className="w-[20%]">
             {/* left all filter */}
             <Left

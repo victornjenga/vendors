@@ -77,6 +77,7 @@ function cartPage() {
     (accumulator, currentValue) => accumulator + currentValue.price,
     0
   );
+  
   let _CartDetails = cartDetails;
 
   // handle total price when product quentity if changed

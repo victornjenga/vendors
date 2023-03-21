@@ -12,7 +12,7 @@ function Register() {
           <div className="grid grid-cols-2 gap-32 mt-6">
             <button onClick={()=> setForm("Customer") }>Customer</button>
             <button onClick={()=> setForm("Seller") }>Seller</button>
-            {/* <button onClick={()=> setForm("Admin") }>Admin</button> */}
+            {/*<button onClick={()=> setForm("Admin") }>Admin</button> */}
           </div>
         </div>
         <div className="mt-4">

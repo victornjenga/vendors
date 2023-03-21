@@ -17,7 +17,7 @@ function customer() {
     const accesstoken =
       JSON.parse(window.localStorage.getItem('accesstoken')) || ''
 
-    if (accesstoken === '') router.push('/login')
+    if(accesstoken === '') router.push('/login')
 
     axios
       .post(baseUrl + 'getuser', {
